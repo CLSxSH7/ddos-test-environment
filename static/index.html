@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .endpoints {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .stats {
+            background-color: #e3f2fd;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #2196F3;
+        }
+
+        .warning {
+            background-color: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>DDoS Test Environment</h1>
+        <p>Controlled Testing Server for Penetration Testing</p>
+    </div>
+
+    <div class="warning">
+        <h3>AUTHORIZED TESTING ONLY</h3>
+        <p>This server is for authorized penetration testing in a controlled environment only.</p>
+    </div>
+
+    <div class="endpoints">
+        <h2>Available Endpoints</h2>
+        <ul>
+            <li><code>GET /</code> - This main page</li>
+            <li><code>GET /api/stats</code> - Server statistics (JSON)</li>
+            <li><code>GET /api/status</code> - API status (JSON)</li>
+            <li><code>GET /health</code> - Health check (JSON)</li>
+            <li><code>GET /slow</code> - Slow response endpoint (2 seconds delay)</li>
+            <li><code>GET /heavy</code> - CPU-intensive response endpoint</li>
+        </ul>
+    </div>
+
+    <div class="stats">
+        <h2>Server Information</h2>
+        <p><strong>Status:</strong> <span style="color: green;">Running</span></p>
+        <p><strong>Port:</strong> 8000</p>
+        <p><strong>Start Time:</strong> <span id="start-time"></span></p>
+        <p><strong>Current Time:</strong> <span id="current-time"></span></p>
+    </div>
+
+    <script>
+        // Set start time
+        document.getElementById('start-time').textContent = new Date().toLocaleString();
+
+        // Update current time
+        function updateTime() {
+            document.getElementById('current-time').textContent = new Date().toLocaleString();
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</div>
+</body>
+</html>
