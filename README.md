@@ -59,8 +59,8 @@ This environment provides:
 
 **2. Live Statistics:**
 
-```bash
-Visit `http://localhost:8000/api/stats` in browser
+```
+Visit http://localhost:8000/api/stats in browser
 ```
 
 **3. Log File Analysis**
@@ -70,14 +70,14 @@ tail -f logs/server.log
 
 `Linux/macOS:`
 
-```bash
+```
 htop
 iotop
 ```
 
 `Windows:`
 
-```bash
+```
 Use Task Manager or Resource Monitor
 ```
 
