@@ -55,6 +55,7 @@ This environment provides:
 **1. Real-time Request Log:**
 
 **In server terminal**
+
 [2023-07-15 14:30:15] REQUEST GET / from 127.0.0.1
 
 **2. Live Statistics:**
